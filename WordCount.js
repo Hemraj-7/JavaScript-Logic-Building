@@ -14,6 +14,11 @@ console.log(wordCounts('Hello! Dear, My name is        Hemraj')); // it's creati
 // Solution by watching video ->
 
 function wordCounts2(sentence) {
+
+    if(typeof sentence !== 'string'){
+        throw new Error('Only String or sentence are allowed')
+    }
+
     console.log('beforeTrim', sentence);
     sentence = sentence.trim();
     console.log('afterTrim', sentence)
@@ -29,3 +34,4 @@ function wordCounts2(sentence) {
 
 console.log('Hello! Dear, My name is        Hemraj',wordCounts2('Hello! Dear, My name is        Hemraj'));
 console.log('     Hello! Dear, My name is        Hemraj   ',wordCounts2('     Hello! Dear, My name is        Hemraj   '));
+// console.log(wordCounts2(343543)) // thorw an error.
