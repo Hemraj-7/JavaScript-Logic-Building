@@ -58,6 +58,8 @@ console.log("a" < "b");
 console.log("b" < "a");
 
 function isStirngInAlphabeticOrder(inputString) {
+  inputString = inputString.replace(/ /g, "");
+  inputString = inputString.toLowerCase();
   for (let i = 0; i < inputString.length - 1; i++) {
     console.log(inputString[i], inputString[i + 1]);
     if (inputString[i] > inputString[i + 1]) {
