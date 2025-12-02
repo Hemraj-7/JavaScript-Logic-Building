@@ -69,3 +69,4 @@ const inputMatrix1 = [
   [5, 6],
 ]
 console.log(transposeMatrix(inputMatrix1));
+
