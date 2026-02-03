@@ -1,24 +1,24 @@
 // answer by yt video
 
-const parenthesis = {
+const parentheses = {
   "{": "}",
   "(": ")",
   "[": "]",
 };
-console.log(parenthesis["("]);
-console.log(parenthesis["{"]);
-console.log(parenthesis["["]);
+console.log(parentheses["("]);
+console.log(parentheses["{"]);
+console.log(parentheses["["]);
 
-function isParenthesisBalanced(inputString) {
+function isParenthesesBalanced(inputString) {
   console.log(inputString);
   const parenthesesArray = [];
   for (let char of inputString) {
     console.log(char);
-    if (parenthesis[char]) {
+    if (parentheses[char]) {
       parenthesesArray.push(char);
     } else if (char === ")" || char === "}" || char === "]") {
       const lastOpeningParenthisis = parenthesesArray.pop();
-      if (parenthesis[lastOpeningParenthisis] !== char) {
+      if (parentheses[lastOpeningParenthisis] !== char) {
         return false;
       }
     }
@@ -30,6 +30,6 @@ function isParenthesisBalanced(inputString) {
   return false;
 }
 
-console.log(isParenthesisBalanced("[{()}]"));
-console.log(isParenthesisBalanced("[{()]"));
-console.log(isParenthesisBalanced("{[]"));
+console.log(isParenthesesBalanced("[{()}]"));
+console.log(isParenthesesBalanced("[{()]"));
+console.log(isParenthesesBalanced("{[]"));
