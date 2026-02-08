@@ -12,7 +12,7 @@ function rollDice() {
   let sidesOfDice = prompt("Enter the numbers of Sides: ");
 
   numbersOfDice = parseInt(numbersOfDice);
-  sidesOfDice = parseInt(numbersOfDice);
+  sidesOfDice = parseInt(sidesOfDice);
 
   if (typeof numbersOfDice !== "number") {
     throw new Error("Numbers of dice are required numbers only");
@@ -22,10 +22,12 @@ function rollDice() {
     throw new Error("Sides of dice are required numbers only");
   }
 
-  if (numbersOfDice < 1) {
-    throw new Error("Numbers of dice value allowed grater then 0");
-  } else if (sidesOfDice < 1) {
-    throw new Error("Sides of dice value are allowed grater than 0");
+  if (numbersOfDice < 1 || numbersOfDice > 4) {
+    throw new Error("Numbers of dice value is allowed between 1 to 4");
+  }
+
+  if (sidesOfDice < 1 || sidesOfDice > 6) {
+    throw new Error("Sides of dice value is also allowed between 1 to 6");
   }
 
   console.log(numbersOfDice, sidesOfDice);
