@@ -44,3 +44,31 @@ function rollDice() {
 
 // console.log(randomNumber(5));
 console.log(rollDice());
+
+// -------------------------------------------------------------------------------------
+// answer by yt.
+
+function rollADice(sidesInADice) {
+  return Math.floor(Math.random() * sidesInADice) + 1;
+}
+
+function rollMultipleDices(numbersOfDice, sidesInADice) {
+  const result = [];
+
+  let counter = 0;
+  while (counter < numbersOfDice) {
+    const rollADiceResult = rollADice(sidesInADice);
+    result.push(rollADiceResult);
+    counter++;
+  }
+
+  return result;
+}
+
+const numbersOfDices = prompt("Please tell numbers of dices: ");
+const numbersOfSides = prompt("Please tell numbers of sides in a dice: ");
+
+console.log(numbersOfDices, numbersOfSides);
+
+console.log(rollMultipleDices(2, 4));
+console.log(rollMultipleDices(numbersOfDices, numbersOfSides));
