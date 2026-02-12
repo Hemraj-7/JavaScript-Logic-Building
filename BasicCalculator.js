@@ -72,7 +72,7 @@ while (!exit) {
   switch (userChoice) {
     case 1:
       console.log("Addition");
-      const userInputForAddition = acceptTowNumbers();
+      const userInputForAddition = acceptTwoNumbers();
       const resultAddition =
         userInputForAddition.firstNumber + userInputForAddition.secondNumber;
       console.log(
@@ -81,7 +81,7 @@ while (!exit) {
       break;
     case 2:
       console.log("Subtraction");
-      const userInputForSubtraction = acceptTowNumbers();
+      const userInputForSubtraction = acceptTwoNumbers();
       const resultSubtraction =
         userInputForSubtraction.firstNumber -
         userInputForSubtraction.secondNumber;
@@ -91,7 +91,7 @@ while (!exit) {
       break;
     case 3:
       console.log("Multiplication");
-      const userInputForMultiplication = acceptTowNumbers();
+      const userInputForMultiplication = acceptTwoNumbers();
       const resultMultiplication =
         userInputForMultiplication.firstNumber *
         userInputForMultiplication.secondNumber;
@@ -101,7 +101,7 @@ while (!exit) {
       break;
     case 4:
       console.log("Division");
-      const userInputForDivision = acceptTowNumbers();
+      const userInputForDivision = acceptTwoNumbers();
       const resultDivision =
         userInputForDivision.firstNumber / userInputForDivision.secondNumber;
       console.log(
@@ -120,7 +120,7 @@ while (!exit) {
 
 console.log("Thanks for using the calculator!")
 
-function acceptTowNumbers() {
+function acceptTwoNumbers() {
   let firstNumber = parseFloat(prompt("Please Enter the first number: "));
   let secondNumber = parseFloat(prompt("Please Enter the second number: "));
   return { firstNumber, secondNumber };
