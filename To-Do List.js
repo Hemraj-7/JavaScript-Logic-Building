@@ -17,7 +17,7 @@ while (!exit) {
   if (userChoice === 4) {
     exit = true;
   } else if (userChoice === 1) {
-    let userInput = prompt("Enter your To-do: ");
+    const userInput = prompt("Enter your To-do: ");
     list.push(userInput);
     console.log("Item Added Successfully!!");
   } else if (userChoice === 2) {
@@ -35,7 +35,7 @@ while (!exit) {
         "List is already Empty! No one item is available to delete!!",
       );
     } else {
-      let selectItem = parseInt(
+      const selectItem = parseInt(
         prompt(
           "Please Enter the number of todo item which you want to delete: ",
         ),
